@@ -1,0 +1,35 @@
+<!-- section which will render the partial view for a particular page -->
+<div ng-controller="header.controller as vm" id="decorative2">
+    <div class="container">
+        <div class="divPanel topArea notop nobottom">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="divLogo" class="pull-left">
+                        <a href="/#/home" id="divSiteTitle">Malayalee Samajam Madurai</a><br />
+                        <a href="/#/home" id="divTagLine">Reg. 78/2009</a>
+                    </div>
+                    <div id="divMenuRight" class="pull-right">
+	                    <div class="navbar">
+	                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+	                            NAVIGATION
+	                        </button>
+	                        <div class="nav-collapse collapse">
+	                            <ul class="nav nav-pills ddmenu">
+	                                <li class="dropdown" ng-class="{ active: vm.isActive('/home')}"><a href="/#/home">Home</a></li>
+									<li class="dropdown" ng-class="{ active: vm.isActive('/active')}"><a href="/#/about">About</a></li>
+	                                <li class="dropdown" ng-class="{ active: vm.isActive('/gallery')}">
+	                                	<a href="/#/gallery" class="dropdown-toggle">Gallery <b class="caret"></b></a>
+	                                	<ul class="dropdown-menu">
+	                                		<li class="dropdown" ng-class="{ active: vm.isActive('/gallery-info')}"><a href="gallery-onam-2014.html">2014 Onam Celebrations</a></li>
+	                                	</ul>
+	                                </li>
+	                                <li class="dropdown" ng-class="{ active: vm.isActive('/contact')}"><a href="/#/contact">Contact</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
