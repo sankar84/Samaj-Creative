@@ -1,0 +1,65 @@
+<div class="container">
+
+  		<div class="divPanel page-content">
+
+      		<div class="row-fluid">
+              	<div class="span8" id="divMain">
+                   <h1>Contact Us</h1>
+				<hr>
+				<userinfo user="Sankar"></userinfo>
+				<hr>
+				<!--Start Contact form -->		                                                
+				<form name="vm.form" ng-submit="vm.login(vm.form.$valid)" novalidate>
+		            <span ng-show="vm.form.$submitted && vm.form.name.$error.required" class="error-msg">Please enter your Name.</span>
+ 					<fieldset>
+						<input type="text" name="name" id="name" value="" ng-model="vm.formData.name" class="input-block-level" placeholder="Name" required />
+					    <input type="text" name="email" id="email" value="" ng-model="vm.formData.email" class="input-block-level" placeholder="Email" required />
+					    <textarea rows="11" name="message" id="message" ng-model="vm.formData.comment" class="input-block-level" placeholder="Comments" required></textarea>
+					    <div class="actions">
+							<button type="submit" class="btn btn-info pull-right" name="submit" value="Send Your Message">Click here to submit your message!</button>
+						</div>
+					</fieldset>
+				</form>  				 
+				<!--End Contact form -->											 
+               </div>
+		
+			<!--Edit Sidebar Content here-->	
+              	<div class="span4 sidebar">
+                   <div class="sidebox">
+  	                    <h3 class="sidebox-title">Contact Information</h3>
+      	            	<p>
+          	            	<address><strong>Malayalee Samajam Madurai</strong><br />
+              	        	<br />
+                  	    	No 1. Vasanthanagar 2nd Street, Madurai<br />
+                      		<abbr title="Phone">Tel:</abbr> 0452-2370267</address> 
+                  		</p>   
+					<hr>
+			        <div class="row-fluid">		
+				        <div class="span4">                           
+		                    <img src="images/placeholder.gif" class="img-polaroid" style="margin:5px 0px 15px;" alt="">   </div>          
+		                <div class="span8">            
+		                    <p><strong>President</strong><br/>K.R. Sankaran<br/>Phone - 9443898580</p>
+		                </div>		 
+			        </div>
+			        <div class="row-fluid">		
+				        <div class="span4">                           
+		                    <img src="images/placeholder.gif" class="img-polaroid" style="margin:5px 0px 15px;" alt="">   </div>          
+		                <div class="span8">            
+		                    <p><strong>Secretary</strong><br/>S. Jayanarayan<br/>Phone - 9566477627</p>
+		                </div>		 
+			        </div>
+			        <div class="row-fluid">		
+				        <div class="span4">                           
+		                    <img src="images/ramadas.png" class="img-polaroid" style="margin:5px 0px 15px;" alt="">   </div>          
+		                <div class="span8">            
+		                    <p><strong>Treasurer</strong><br/>K. Ramadasan<br/>Phone - 9488385092</p>
+		                </div>		 
+			        </div>
+                  	</div>
+              	</div>
+			<!--/End Sidebar Content-->
+          	
+          	</div>			
+  		</div>
+
+</div>

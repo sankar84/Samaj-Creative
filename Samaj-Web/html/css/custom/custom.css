@@ -476,3 +476,8 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'Op
     }
 }
 
+.error-msg {
+	color: red;
+	font-size: 12px;
+	position: relative;
+}
