@@ -1,3 +1,7 @@
+// npm install -g grunt-cli
+// npm install
+// grunt min
+
 module.exports = function (grunt) {
     'use strict';
     
@@ -38,23 +42,23 @@ module.exports = function (grunt) {
 			endmincopy: {
 				expand: true,
 				cwd: 'dist/',
-				src: ['**/*.{js,css}'],
+				src: ['**'],
 				dest: 'dev/'
 			}
         },
         
         rev: {
             files: {
-                src: ['temp/**/*.{js,css}']
+                src: ['dist/**/*.{js,css}']
             }
         },
 
         useminPrepare: {
-            html: 'dev/index.html'
+            html: 'temp/index.html'
         },
 
         usemin: {
-            html: ['dev/index.html']
+            html: ['dist/index.html']
         },
 
         uglify: {
@@ -85,7 +89,7 @@ module.exports = function (grunt) {
     ]);
 	
     grunt.task.registerTask('min', [
-        'clean:all', 'copy:temp', 'copy:main', 'copy:file', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'copy:endmincopy'
+        'clean:all', 'copy:temp', 'copy:main', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin', 'copy:endmincopy'
     ]);
 
 };
